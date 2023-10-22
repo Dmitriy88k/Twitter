@@ -1,0 +1,278 @@
+/*General Settings*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* styles for LOGIN PAGE */
+
+.login-container {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  margin-top: 59px;
+  width: 547px;
+}
+
+.login-img {
+  display: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 30px;
+}
+
+.login-img img {
+  width: 30px;
+  height: 29px;
+  flex-shrink: 0;
+}
+
+.login-img img:hover {
+  animation: spin .9s linear ; 
+}
+
+.login-title {
+  margin-bottom: 30px;
+}
+
+.login-title h3 {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.login-input {
+  width: 400px;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background-color: #fff;
+  margin-bottom: 18px;
+  
+}
+
+.login-input::placeholder {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.login-button {
+  width: 400px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 76px;
+  background-color: #1DA1F2;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  margin-bottom: 30px;
+  transition: linear .1s;
+  font-size: 12px;
+}
+
+.login-button:hover {
+  opacity: .8;
+}
+
+.login-links {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: linear .15s;
+}
+
+.forgot-password a, .sign-up-twitter a {
+  text-decoration: none;
+  color: #1DA1F2;
+  text-align: right;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+}
+
+.forgot-password a:hover, .sign-up-twitter:hover {
+  opacity: .7;
+}
+
+/* styles for SIGN-UP PAGE */
+
+.signup-box {
+  display: flex;
+  width: 100%;
+  height: 94vh;
+}
+
+.black-left {
+  width: 60%;
+  background-color: #000;
+}
+
+.x-img {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-img img {
+  width: 175px;
+  height: 165px;
+  flex-shrink: 0;
+}
+
+.white-right {
+  width: 39%;
+}
+
+.create-account-box {
+  width: 95%;
+  margin-top: 20%;
+  height: 75%;
+  margin-left: 33px;
+  margin-right: 23px;
+}
+
+.create-account-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 43px;
+}
+
+.create-account-logo img {
+  width: 30px;
+  height: 29px;
+}
+
+.create-account-logo img:hover {
+  animation: spin .9s linear ; 
+}
+
+.create-account-title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.create-account-input {
+  width: 85%;
+  margin: 0 20px 20px 20px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background: #FFF;
+}
+
+.create-account-input::placeholder {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.have-an-account-p {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 70px 0 22px 35px;
+}
+.have-an-account-login {
+  text-decoration: none;
+  color: #1DA1F2;
+}
+
+.have-an-account-login:hover{
+  opacity: .6;
+}
+
+.create-account-next-button {
+  width: 85%;
+  border-radius: 76px;
+  background-color: #1DA1F2;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 14px 0;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.create-account-next-button:hover {
+  opacity: 0.8;
+}
+
+.footer-list {
+  margin-left: 200px;
+}
+
+.footer-list ul {
+  display: flex;
+  list-style: none;
+  height: 6vh;
+  align-items: center;
+  justify-content: space-around;
+  width: 82%;
+  margin: 0 auto;
+}
+
+.footer-list ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.copyright {
+  color: #000;
+  font-size: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-list ul li a:hover {
+  opacity: .6;
+}
+
+
