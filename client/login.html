@@ -22,16 +22,16 @@
           <h3>Log in to Twitter</h3>
         </div>
         <form action="">
-          <input class="login-input" type="text" placeholder="Email adress" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Email address')"><br>
-          <input class="login-input" type="text" placeholder="Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Password')">
-          <button class="login-button">Log In</button>
+          <input id="login-email" class="login-input" type="text" placeholder="Email adress" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Email address')"><br>
+          <input id="login-password" type="password" class="login-input" type="text" placeholder="Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Password')">
+          <button type="button" id="login-button" class="login-button">Log In</button>
         </form>
         <div class="login-links">
           <div class="forgot-password">
             <a href="#">Forgot password?</a>
           </div>
           <div class="sign-up-twitter">
-            <a href="#">Sign up to Twitter</a>
+            <a href="./signup.html">Sign up to Twitter</a>
           </div>
         </div>
       </div>
