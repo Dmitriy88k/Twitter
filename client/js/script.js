@@ -16,9 +16,16 @@ const loginButton = document.getElementById("login-button");
 loginButton.addEventListener("click", function() {
   const loginEmailInput = loginEmail.value;
   const loginPasswordInput = loginPassword.value;
-  const loginUrl = "http://167.71.82.123:8081/signup";
+  const loginUrl = "http://167.71.82.123:8081/login";
 
-  fetch(loginUrl).then(response => response.json()).then((data) => {
+  fetch(loginUrl, {
+    method: 'POST',
+    body: JSON.stringify({
+      email: loginEmailInput,
+      password: loginPasswordInput
+    }),
+    headers: {'Content-Type': 'application/json; charset=utf-8',}
+  }).then(response => response.json()).then((data) => {
     function validateEmail(loginEmailInput) {
       const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
       return regex.test(loginEmailInput);
