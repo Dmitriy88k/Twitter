@@ -1,6 +1,6 @@
 const loginEmail = document.getElementById("login-email");
 const loginPassword = document.getElementById("login-password");
-const form = document.getElementById("form");
+const form = document.getElementById("form-signin");
 
 function validateEmail(loginEmailInput) {
   const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -34,6 +34,7 @@ form.addEventListener('submit', (event) => {
 
   fetch(loginUrl, {
     method: 'POST',
+    credentials: 'include',
     body: JSON.stringify({
       email: loginEmailInput,
       password: loginPasswordInput
