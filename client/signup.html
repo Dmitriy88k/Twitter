@@ -7,41 +7,43 @@
   <title>Sign Up</title>
   <link rel="shortcut icon" href="./img/logo.png">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <div class="signup-container">
-      <div class="signup-box">
-        <div class="black-left">
-          <div class="x-img">
-            <img src="./img/x-gray.png" alt="">
-          </div>  
-        </div>
-        <div class="white-right">
-          <div class="create-account-box">
-            <div class="create-account-logo">
-              <img src="./img/logo.png" alt="">
-            </div>
-            <h1 class="create-account-title">Create an account</h1>
-            <form id="form-signup">
-              <input id="signup-name" class="create-account-input" type="text" placeholder="Name"> <br>
-              <input id="signup-email" class="create-account-input" type="text" placeholder="Email"> <br>
-              <input id="signup-password" class="create-account-input" type="password" placeholder="Password"> <br>
-              <input id="signup-repeat-password" class="create-account-input" type="password" placeholder="Repeat password"> <br>
-              <div class="have-an-account">
-                <p class="have-an-account-p">Already have an account? <span><a href="./login.html" class="have-an-account-login">Login</a></span></p>
-              </div>
-              <button class="create-account-next-button">Next</button>
-            </form>
+  <main class="signup-main">
+    <div class="signup-container row w-100">
+      <div class="black-left d-flex justify-content-center align-items-center col-md-7 col-lg-7">
+        <div class="x-img ">
+          <img src="./img/x-gray.png" alt="">
+        </div>  
+      </div>
+      <div class="white-right col-md-5 col-lg-5">
+        <div class="create-account-box col-md-12 col-lg-12">
+          <button id="hamburger" class="hamburger">
+            <div class="bar"></div>
+          </button>
+          <div class="create-account-logo w-100 d-flex justify-content-center mt-5 pt-3 mb-4">
+            <img src="./img/logo.png" alt="">
           </div>
+          <h1 class="create-account-title text-body font-weight-bolder mb-4">Create an account</h1>
+          <form id="form-signup">
+            <input id="signup-name" class="create-account-input" type="text" placeholder="Name"> <br>
+            <input id="signup-email" class="create-account-input" type="text" placeholder="Email"> <br>
+            <input id="signup-password" class="create-account-input" type="password" placeholder="Password"> <br>
+            <input id="signup-repeat-password" class="create-account-input" type="password" placeholder="Repeat password"> <br>
+            <div class="have-an-account mt-5 pb-5">
+              <p class="have-an-account-p mb-4">Already have an account? <span><a href="./login.html" class="have-an-account-login">Login</a></span></p>
+              <button class="create-account-next-button text-white">Next</button>
+            </div>
+          </form>
         </div>
       </div>
     </div> 
   </main>
-  <footer>
-    <div class="footer-list">
-      <ul>
+  <footer class="signup-footer mt-4">
+    <div class="footer-list row container-fluid">
+      <ul class="col-sm-10 col-md-12 col-lg-10 w-75 row mx-auto d-flex justify-content-around align-items-center">
         <li><a href="">About</a></li>
         <li><a href="">Help Center</a></li>
         <li><a href="">Term of Service</a></li>
@@ -62,8 +64,10 @@
       </ul>
     </div>
 
-  </footer>
 
   <script src="./js/singup-script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

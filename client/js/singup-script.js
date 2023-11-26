@@ -1,10 +1,20 @@
-const form = document.getElementById('form-signup');
-const userName = document.getElementById('signup-name');
-const signupEmail = document.getElementById('signup-email');
-const signupPassword = document.getElementById('signup-password');
-const signupRepeatPassword = document.getElementById('signup-repeat-password');
+const form = document.getElementById("form-signup");
+const userName = document.getElementById("signup-name");
+const signupEmail = document.getElementById("signup-email");
+const signupPassword = document.getElementById("signup-password");
+const signupRepeatPassword = document.getElementById("signup-repeat-password");
+const hamburgerBtn = document.getElementById("hamburger");
+const smallScreenQuery = window.matchMedia("(max-width: 768px)");
 
-form.addEventListener('submit', (event) => {
+hamburgerBtn.addEventListener("click", function () {
+  if (smallScreenQuery.matches) {
+    hamburgerBtn.classList.toggle("is-active");
+  } else {
+    console.log("Error");
+  }
+});
+
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const userNameInput = userName.value;
@@ -22,23 +32,23 @@ form.addEventListener('submit', (event) => {
   //fetch with redirect
 
   fetch(signupUrl, {
-    method: 'POST',
+    method: "POST",
     // credentials: 'include',
     body: JSON.stringify({
       name: userNameInput,
-      // username: signupEmailInput,
+      username: signupEmailInput,
       email: signupEmailInput,
-      password: signupPasswordInput
+      password: signupPasswordInput,
     }),
-    headers: {'Content-Type': 'application/json; charset=utf-8',}
+    headers: { "Content-Type": "application/json; charset=utf-8" },
   })
-  // .then(response => response.text())
-  .then((response) => {
-   if (response.ok) {
-    window.location.href="http://167.71.82.123:8088/feed.html"
-   }
-    
-  }).catch(error => {
-    console.log('error', error)
-  });
-})
+    // .then(response => response.text())
+    .then((response) => {
+      if (response.ok) {
+        window.location.href = "http://167.71.82.123:8088/feed.html";
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+});

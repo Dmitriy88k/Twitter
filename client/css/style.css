@@ -4,35 +4,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 /* styles for LOGIN PAGE */
-
-.login-container {
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-box {
-  margin-top: 59px;
-  width: 547px;
-}
-
-.login-img {
-  display: fixed;
-  top: 0;
-  left: 0;
-  margin-bottom: 30px;
-}
 
 .login-img img {
   width: 30px;
@@ -41,241 +25,210 @@
 }
 
 .login-img img:hover {
-  animation: spin .9s linear ; 
+  animation: spin 0.9s linear;
 }
 
-.login-title {
-  margin-bottom: 30px;
-}
-
-.login-title h3 {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  font-style: normal;
+.login-title h2 {
   font-weight: 900;
+  font-style: normal;
   line-height: normal;
 }
 
 .login-input {
-  width: 400px;
-  padding: 15px;
+  padding: 13px;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.20);
-  background-color: #fff;
-  margin-bottom: 18px;
-  
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .login-input::placeholder {
-  color: rgba(0, 0, 0, 0.60);
-  font-family: "Roboto";
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .login-button {
-  width: 400px;
   height: 45px;
-  flex-shrink: 0;
   border-radius: 76px;
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
   cursor: pointer;
-  color: #fff;
   border: none;
-  margin-bottom: 30px;
-  transition: linear .1s;
+  transition: linear 0.1s;
   font-size: 12px;
 }
 
 .login-button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .login-links {
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: linear .15s;
+  transition: linear 0.15s;
 }
 
-.forgot-password a, .sign-up-twitter a {
+.forgot-password a,
+.sign-up-twitter a {
   text-decoration: none;
-  color: #1DA1F2;
+  color: #1da1f2;
   text-align: right;
-  font-family: Roboto;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  
 }
 
-.forgot-password a:hover, .sign-up-twitter:hover {
-  opacity: .7;
+.forgot-password a:hover,
+.sign-up-twitter:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .login-title h2 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+  .login-button {
+    margin-top: 25px;
+  }
+
+  .login-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* styles for SIGN-UP PAGE */
 
-.signup-box {
-  display: flex;
-  width: 100%;
-  height: 94vh;
-}
-
 .black-left {
-  width: 60%;
-  background-color: #000;
+  background: black;
+  height: 100vh;
 }
 
-.x-img {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
 
-.x-img img {
-  width: 175px;
-  height: 165px;
-  flex-shrink: 0;
-}
 
-.white-right {
-  width: 39%;
+.hamburger {
+  display: block;
 }
 
 .create-account-box {
-  width: 95%;
-  margin-top: 20%;
-  height: 75%;
-  margin-left: 33px;
-  margin-right: 23px;
+  position: relative;
 }
 
-.create-account-logo {
+.hamburger {
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 35px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 43px;
+  height: 5px;
+  background: rgb(50, 135, 215);
+  margin: 6px 0px;
+  transition: 0.4s;
+  border: none;
 }
 
-.create-account-logo img {
-  width: 30px;
-  height: 29px;
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
 }
 
-.create-account-logo img:hover {
-  animation: spin .9s linear ; 
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.white-right {
+  height: 100vh;
 }
 
 .create-account-title {
-  color: #000;
-  font-family: "Roboto";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 40px;
-  padding-left: 20px;
+  font-size: 24px;
+}
+
+.create-account-box {
+  text-align: center;
 }
 
 .create-account-input {
-  width: 85%;
-  margin: 0 20px 20px 20px;
-  padding: 12px;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.20);
-  background: #FFF;
-}
-
-.create-account-input::placeholder {
-  color: rgba(0, 0, 0, 0.60);
-  font-family: "Roboto";
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.have-an-account-p {
-  font-family: "Roboto";
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 70px 0 22px 35px;
-}
-.have-an-account-login {
-  text-decoration: none;
-  color: #1DA1F2;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
-.have-an-account-login:hover{
-  opacity: .6;
+.have-an-account-p span a {
+  text-decoration: none;
 }
 
 .create-account-next-button {
-  width: 85%;
   border-radius: 76px;
-  background-color: #1DA1F2;
-  color: #fff;
-  font-family: "Roboto";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: center;
-  padding: 14px 0;
+  background: #1DA1F2;
+  width: 300px;
   border: none;
-  margin-left: 20px;
-  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  transition: .1s linear;
 }
 
-.create-account-next-button:hover {
-  opacity: 0.8;
+.create-account-next-button:focus {
+  border: none;
+  outline: none;
 }
 
-.footer-list {
-  margin-left: 200px;
+.create-account-next-button:active {
+  opacity: .8;
 }
 
-.footer-list ul {
-  display: flex;
-  list-style: none;
-  height: 6vh;
-  align-items: center;
-  justify-content: space-around;
-  width: 82%;
-  margin: 0 auto;
+.signup-footer {
+  display: none;
 }
 
-.footer-list ul li a{
+.footer-list ul li {
+  list-style-type: none;
+}
+
+.footer-list ul li a, .copyright {
   text-decoration: none;
-  color: #000;
-  font-size: 10px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: black;
+  font-size: 12px;
+  margin-right: 10px;
 }
 
-.copyright {
-  color: #000;
-  font-size: 10px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.footer-list ul li a:hover{
+  opacity: .5;
 }
 
-.footer-list ul li a:hover {
-  opacity: .6;
-}
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
 
+}
 
 /* styles for FEED PAGE */
 
@@ -292,13 +245,13 @@
   justify-content: space-between;
 }
 
-.side-menu-logo img{
+.side-menu-logo img {
   width: 25px;
   height: 24px;
 }
 
 .side-menu-logo img:hover {
-  animation: spin .9s linear ; 
+  animation: spin 0.9s linear;
 }
 
 .side-menu-list ul li {
@@ -314,7 +267,7 @@
 }
 
 .side-menu-list ul li a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .side-menu-list ul li a svg {
@@ -323,7 +276,7 @@
 }
 
 .home-light {
-  fill: #1DA1F2;
+  fill: #1da1f2;
 }
 
 .side-menu-list ul li a p {
@@ -337,7 +290,7 @@
 }
 
 .side-menu-home {
-  color: #1DA1F2;
+  color: #1da1f2;
   font-family: Roboto;
   font-size: 19px;
   font-style: normal;
@@ -354,14 +307,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 9999px;
-  background:#1DA1F2;
+  background: #1da1f2;
   border: none;
   cursor: pointer;
-  transition: linear .3s;
+  transition: linear 0.3s;
 }
 
 .twitt-button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .side-menu-profile {
@@ -388,7 +341,7 @@
 }
 
 .profile-name:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .profile-info {
@@ -398,16 +351,16 @@
 
 .profile-info a {
   text-decoration: none;
-  color: #1DA1F2;
+  color: #1da1f2;
   font-size: 12px;
 }
 
 .profile-info a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .profile-dots a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .feed-section {
@@ -456,7 +409,7 @@
 .actions-img ul {
   list-style-type: none;
   display: flex;
-  margin-left: 60px
+  margin-left: 60px;
 }
 
 .actions-img ul li {
@@ -474,8 +427,8 @@
   align-items: center;
   gap: 10px;
   border-radius: 9999px;
-  opacity: .5;
-  background: #1DA1F2;
+  opacity: 0.5;
+  background: #1da1f2;
   border: none;
   color: white;
   margin-top: 5px;
@@ -496,7 +449,7 @@
 
 .user-name {
   font-family: "Roboto";
-  color: #0F1419;
+  color: #0f1419;
   font-size: 13px;
   font-weight: 700;
   line-height: normal;
@@ -508,7 +461,7 @@
 }
 
 .user-comment {
-  color: #0F1419;
+  color: #0f1419;
   font-size: 13px;
   font-weight: 500;
   font-family: "Roboto";
@@ -532,7 +485,10 @@
   margin-left: 60px;
 }
 
-.comments, .repost, .likes, .downloads {
+.comments,
+.repost,
+.likes,
+.downloads {
   display: flex;
   align-items: center;
   font-family: "Roboto";
@@ -544,6 +500,5 @@
 }
 
 .red-heart {
-  color: #F4245E;
+  color: #f4245e;
 }
-
