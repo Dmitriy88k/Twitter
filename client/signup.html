@@ -12,21 +12,45 @@
 </head>
 <body>
   <main class="signup-main">
-    <div class="signup-container row w-100">
-      <div class="black-left d-flex justify-content-center align-items-center col-md-7 col-lg-7">
+    <div class="signup-container container-fluid">
+      <div class="black-left">
         <div class="x-img ">
           <img src="./img/x-gray.png" alt="">
         </div>  
       </div>
-      <div class="white-right col-md-5 col-lg-5">
-        <div class="create-account-box col-md-12 col-lg-12">
-          <button id="hamburger" class="hamburger">
-            <div class="bar"></div>
-          </button>
-          <div class="create-account-logo w-100 d-flex justify-content-center mt-5 pt-3 mb-4">
+
+      <div class="white-right">
+        <div class="signup-logo">
+          <div class="signup-logo-inner">
             <img src="./img/logo.png" alt="">
+            <button id="hamburger" class="hamburger">
+              <div class="bar"></div>
+            </button>
           </div>
-          <h1 class="create-account-title text-body font-weight-bolder mb-4">Create an account</h1>
+        </div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Help Center</a></li>
+            <li><a href="">Term of Service</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Ads Info</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Status</a></li>
+            <li><a href="">Carres</a></li>
+            <li><a href="">Brand Resources</a></li>
+            <li><a href="">Advertising</a></li>
+            <li><a href="">Marketing</a></li>
+            <li><a href="">Twitter for Business</a></li>
+            <li><a href="">Developers</a></li>
+            <li><a href="">Directory</a></li>
+            <li><a href="">Settings</a></li>
+            <li><span class="copyright">&copy;2021 Twitter Inc.</span></li>
+          </ul>
+        </nav>
+        <div class="create-account-box text-center">
+          <h1 class="create-account-title text-body font-weight-bolder">Create an account</h1>
           <form id="form-signup">
             <input id="signup-name" class="create-account-input" type="text" placeholder="Name"> <br>
             <input id="signup-email" class="create-account-input" type="text" placeholder="Email"> <br>
@@ -41,9 +65,9 @@
       </div>
     </div> 
   </main>
-  <footer class="signup-footer mt-4">
-    <div class="footer-list row container-fluid">
-      <ul class="col-sm-10 col-md-12 col-lg-10 w-75 row mx-auto d-flex justify-content-around align-items-center">
+  <footer class="signup-footer container-fluid mt-4">
+    <div class="footer-list ">
+      <ul class="row d-flex justify-content-center">
         <li><a href="">About</a></li>
         <li><a href="">Help Center</a></li>
         <li><a href="">Term of Service</a></li>
@@ -66,6 +90,8 @@
 
 
   <script src="./js/singup-script.js"></script>
+  <script src="./js/common.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

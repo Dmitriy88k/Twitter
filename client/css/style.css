@@ -105,24 +105,43 @@
 /* styles for SIGN-UP PAGE */
 
 .black-left {
+  display: none;
   background: black;
-  height: 100vh;
+  min-height: 80vh;
 }
 
+.white-right {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.signup-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin: 35px 0;
+}
+
+.signup-logo-inner {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-logo-inner img {
+  min-width: 35px;
+  min-height: 5vh;
+}
 
 .hamburger {
   display: block;
 }
 
-.create-account-box {
-  position: relative;
-}
-
 .hamburger {
-  position: absolute;
-  right: 0px;
-  top: 15px;
   width: 35px;
   cursor: pointer;
   background: none;
@@ -159,16 +178,24 @@
   opacity: 0;
 }
 
-.white-right {
-  height: 100vh;
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 100;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 .create-account-title {
   font-size: 24px;
-}
-
-.create-account-box {
-  text-align: center;
+  max-width: 75%;
+  margin: 0 auto 35px auto;
 }
 
 .create-account-input {
@@ -176,9 +203,14 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
   font-size: 12px;
-  width: 300px;
+  width: 75%;
   padding: 10px;
   margin-bottom: 15px;
+}
+
+.have-an-account {
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .have-an-account-p span a {
@@ -187,12 +219,12 @@
 
 .create-account-next-button {
   border-radius: 76px;
-  background: #1DA1F2;
-  width: 300px;
+  background: #1da1f2;
+  width: 100%;
   border: none;
   padding: 10px;
   outline: none;
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 
 .create-account-next-button:focus {
@@ -201,7 +233,7 @@
 }
 
 .create-account-next-button:active {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .signup-footer {
@@ -212,22 +244,88 @@
   list-style-type: none;
 }
 
-.footer-list ul li a, .copyright {
+.footer-list ul li a,
+.copyright {
   text-decoration: none;
   color: black;
   font-size: 12px;
   margin-right: 10px;
 }
 
-.footer-list ul li a:hover{
-  opacity: .5;
+.footer-list ul li a:hover {
+  opacity: 0.5;
 }
 
 @media only screen and (min-width: 768px) {
+  .signup-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .black-left {
+    display: block;
+    background: black;
+    width: 65%;
+    min-height: 90vh;
+  }
+
+  .x-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .x-img img {
+    min-width: 35px;
+    min-height: 30vh;
+  }
+
+  .white-right {
+    display: block;
+    width: 35%;
+  }
+
+  .signup-logo-inner {
+    justify-content: center;
+  }
+
   .hamburger {
     display: none;
   }
 
+  .mobile-nav {
+    display: none;
+  }
+
+  .create-account-box {
+    min-height: 50vh;
+  }
+
+  footer {
+    min-height: 5vh;
+  }
+
+  .signup-footer {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .footer-list {
+    position: static;
+    bottom: 0;
+  }
+
+  .footer-list ul li {
+    white-space: nowrap;
+    margin: auto 5px;
+    padding-bottom: 5px;
+  }
 }
 
 /* styles for FEED PAGE */
@@ -243,11 +341,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 100vh;
 }
 
 .side-menu-logo img {
   width: 25px;
   height: 24px;
+  margin-bottom: 25px;
 }
 
 .side-menu-logo img:hover {
@@ -317,13 +417,16 @@
   opacity: 0.8;
 }
 
+.feed-section {
+  margin-left: 40px;
+}
+
 .side-menu-profile {
   display: flex;
   margin-top: 23vh;
+  padding-bottom: 10px;
 }
-.profile-avatar {
-  padding-bottom: 15px;
-}
+
 
 .profile-avatar a img {
   border-radius: 999px;
@@ -331,7 +434,7 @@
   height: 30px;
 }
 
-.profile-name {
+#profile-name {
   color: black;
   font-family: "Roboto";
   font-size: 12px;
@@ -340,7 +443,7 @@
   line-height: normal;
 }
 
-.profile-name:hover {
+#profile-name:hover {
   opacity: 0.8;
 }
 
@@ -365,7 +468,7 @@
 
 .feed-section {
   margin-top: 15px;
-  width: 36%;
+  width: 35%;
 }
 
 .feed-title {
@@ -399,20 +502,34 @@
   letter-spacing: -0.3px;
 }
 
-.feed-line-2 {
+.tweet-icons {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
 }
 
-.actions-img ul {
+#tweet-input {
+  outline: none;
+  border: none;
+  padding: 5px 5px 5px 0;
+  color: #5B7083;
+  font-size: 15px;
+}
+
+#tweet-input:focus {
+  border: 2px solid #5B7083;
+  border-radius: 5px;
+  padding-left: 3px;
+}
+
+.tweet-icons ul {
   list-style-type: none;
   display: flex;
   margin-left: 60px;
 }
 
-.actions-img ul li {
+.tweet-icons ul li {
   margin: 5px 10px 0 0;
   width: 24px;
   height: 24px;
@@ -432,73 +549,18 @@
   border: none;
   color: white;
   margin-top: 5px;
+  transition: .28s ease;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+.tweet-btn:hover {
+  background: #0c9af3;
+  opacity: .8;
 }
 
-.user-info img {
-  width: 43px;
-  height: 43px;
-  border-radius: 999px;
-}
-
-.user-name {
-  font-family: "Roboto";
-  color: #0f1419;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.user-tweet {
-  color: #5b7083;
-  font-weight: 500;
-}
-
-.user-comment {
-  color: #0f1419;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: "Roboto";
-  margin-top: 4px;
-}
-
-.tweet-img {
-  margin-left: 60px;
-}
-
-.tweet-img img {
+#tweets {
+  margin-top: 25px;
+  max-height: 70vh;
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  margin-top: 3px;
+  overflow-y: scroll;
 }
 
-.tweet-likes {
-  display: flex;
-  align-items: center;
-  margin-left: 60px;
-}
-
-.comments,
-.repost,
-.likes,
-.downloads {
-  display: flex;
-  align-items: center;
-  font-family: "Roboto";
-  font-size: 13px;
-  font-weight: 500;
-  gap: 5px;
-  margin-right: 90px;
-  margin-top: 10px;
-}
-
-.red-heart {
-  color: #f4245e;
-}

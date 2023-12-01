@@ -1,13 +1,13 @@
 const loginEmail = document.getElementById('login-email');
 const loginPassword = document.getElementById('login-password');
-const form = document.getElementById('form-signin');
+const signinForm = document.getElementById('form-signin');
 
 function validateEmail(loginEmailInput) {
     const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     return regex.test(loginEmailInput);
 }
 
-form.addEventListener('submit', event => {
+signinForm.addEventListener('submit', event => {
     event.preventDefault();
 
     const loginEmailInput = loginEmail.value;
