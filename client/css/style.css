@@ -184,7 +184,7 @@
   display: block;
   position: absolute;
   top: 18%;
-  left: 120%;
+  left: -120%;
   bottom: 0;
   width: 100%;
   min-height: 80vh;
@@ -193,7 +193,7 @@
   opacity: .92;
   padding-top: 5px;
   transition: .34s linear;
-  overflow: ;
+  overflow-x: hidden;
 }
 
 .mobile-nav.is-active {
