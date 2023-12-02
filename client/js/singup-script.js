@@ -5,14 +5,18 @@ const signupPassword = document.getElementById("signup-password");
 const signupRepeatPassword = document.getElementById("signup-repeat-password");
 const hamburgerBtn = document.getElementById("hamburger");
 const smallScreenQuery = window.matchMedia("(max-width: 768px)");
+const mobileMenu = document.getElementById("mobile-nav");
 
 hamburgerBtn.addEventListener("click", function () {
   if (smallScreenQuery.matches) {
     hamburgerBtn.classList.toggle("is-active");
+    mobileMenu.classList.toggle('is-active');
   } else {
     console.log("Error");
   }
 });
+
+
 
 signupForm.addEventListener("submit", (event) => {
   event.preventDefault();

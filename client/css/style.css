@@ -106,7 +106,7 @@
 
 .black-left {
   display: none;
-  background: black;
+  
   min-height: 80vh;
 }
 
@@ -115,6 +115,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  
 }
 
 .signup-logo {
@@ -160,7 +162,7 @@
   display: block;
   width: 100%;
   height: 5px;
-  background: rgb(50, 135, 215);
+  background: #1da1f2;
   margin: 6px 0px;
   transition: 0.4s;
   border: none;
@@ -179,18 +181,49 @@
 }
 
 .mobile-nav {
-  display: none;
-  position: fixed;
-  top: 100;
-  left: 0;
+  display: block;
+  position: absolute;
+  top: 18%;
+  left: 120%;
+  bottom: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
+  background: black;
+  border-radius: 20px;
+  opacity: .92;
+  padding-top: 5px;
+  transition: .34s linear;
+  overflow: ;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+  display: block;
+}
+
+
+.mobile-nav ul li {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.mobile-nav ul li span {
+  display: none;
 }
 
 .mobile-nav ul li a {
   text-decoration: none;
+  color:#1da1f2;
+  transition: 0.2s linear;
+}
+
+.mobile-nav ul li a:hover {
+  opacity: .9;
   color: white;
 }
+
+
 
 .create-account-title {
   font-size: 24px;
@@ -326,6 +359,8 @@
     margin: auto 5px;
     padding-bottom: 5px;
   }
+
+ 
 }
 
 /* styles for FEED PAGE */

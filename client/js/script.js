@@ -10,19 +10,19 @@ const profileEmail = document.getElementById('profile-email')
 // profileName.appendChild(profileUserName);
 
 function loadUserInfo() {
-  return fetch('http://167.71.82.123:8081/tweets', {
+  return fetch('http://167.71.82.123:8081/me', {
   headers: {
     Authorization: apiToken,
   },
 })
   .then((response) => response.json())
   .then((tweetsArray) => {
-    tweetsArray.forEach(tweet => {
       const userName = document.createElement('p')
-      userName.innerText = tweet.user.name;
-
+      userName.innerText = tweetsArray.name;
       profileName.appendChild(userName);
-    });
+      const userEmail = document.createElement('p')
+      userEmail.innerText = tweetsArray.email;
+      profileEmail.appendChild(userEmail);
   })
   .catch((error) => {
     console.error("error fetching user info: ", error);
