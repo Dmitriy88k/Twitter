@@ -7,11 +7,6 @@ const hamburgerBtn = document.getElementById("hamburger");
 const smallScreenQuery = window.matchMedia("(max-width: 768px)");
 const mobileMenu = document.getElementById("mobile-nav");
 
-function validateEmail(signupEmail) {
-  const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-  return regex.test(signupEmail);
-}
-
 hamburgerBtn.addEventListener("click", function () {
   if (smallScreenQuery.matches) {
     hamburgerBtn.classList.toggle("is-active");
@@ -31,20 +26,11 @@ signupForm.addEventListener("submit", (event) => {
   const signupUrl = `${backendUrl}/signup`;
 
   if (signupPasswordInput !== signupRepeatPasswordInput) {
-    alert("Passwords do not match!")
-  }
+    signupRepeatPassword.setCustomValidity('Passwords do not match')
+    signupRepeatPassword.reportValidity()
 
-  if (userNameInput === "" && signupEmailInput === "" && signupPasswordInput === "" && signupRepeatPasswordInput === "") {
-    alert("Please fill out the fields");
-  } else if (signupEmailInput === "") {
-    alert("Email is Empty");
-  } else if (signupPasswordInput === "") {
-    alert("Password is Empty");
-  } else if (signupRepeatPasswordInput === "") {
-    alert("Repeat Password field is Empty");
+    return;
   }
-
-  //fetch with redirect
 
   fetch(signupUrl, {
     method: "POST",

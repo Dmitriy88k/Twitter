@@ -51,11 +51,11 @@
         </nav>
         <div class="create-account-box text-center">
           <h1 class="create-account-title text-body font-weight-bolder">Create an account</h1>
-          <form id="form-signup">
-            <input id="signup-name" class="create-account-input" type="text" placeholder="Name"> <br>
-            <input id="signup-email" class="create-account-input" type="text" placeholder="Email"> <br>
-            <input id="signup-password" class="create-account-input" type="password" placeholder="Password"> <br>
-            <input id="signup-repeat-password" class="create-account-input" type="password" placeholder="Repeat password"> <br>
+          <form id="form-signup" novalidate>
+            <input id="signup-name" required class="create-account-input" type="text" placeholder="Name"> <br>
+            <input id="signup-email" class="create-account-input" required type="email" placeholder="Email"> <br>
+            <input id="signup-password" class="create-account-input" required type="password" placeholder="Password"> <br>
+            <input id="signup-repeat-password" class="create-account-input" required type="password" placeholder="Repeat password"> <br>
             <div class="have-an-account mt-5 pb-5">
               <p class="have-an-account-p mb-4">Already have an account? <span><a href="./login.html" class="have-an-account-login">Login</a></span></p>
               <button class="create-account-next-button text-white">Next</button>
