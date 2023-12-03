@@ -7,16 +7,19 @@ const hamburgerBtn = document.getElementById("hamburger");
 const smallScreenQuery = window.matchMedia("(max-width: 768px)");
 const mobileMenu = document.getElementById("mobile-nav");
 
+function validateEmail(signupEmail) {
+  const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  return regex.test(signupEmail);
+}
+
 hamburgerBtn.addEventListener("click", function () {
   if (smallScreenQuery.matches) {
     hamburgerBtn.classList.toggle("is-active");
-    mobileMenu.classList.toggle('is-active');
+    mobileMenu.classList.toggle("is-active");
   } else {
     console.log("Error");
   }
 });
-
-
 
 signupForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -27,10 +30,18 @@ signupForm.addEventListener("submit", (event) => {
   const signupRepeatPasswordInput = signupRepeatPassword.value;
   const signupUrl = `${backendUrl}/signup`;
 
-  //validation
   if (signupPasswordInput !== signupRepeatPasswordInput) {
-    alert("The password is not the same");
-    return;
+    alert("Passwords do not match!")
+  }
+
+  if (userNameInput === "" && signupEmailInput === "" && signupPasswordInput === "" && signupRepeatPasswordInput === "") {
+    alert("Please fill out the fields");
+  } else if (signupEmailInput === "") {
+    alert("Email is Empty");
+  } else if (signupPasswordInput === "") {
+    alert("Password is Empty");
+  } else if (signupRepeatPasswordInput === "") {
+    alert("Repeat Password field is Empty");
   }
 
   //fetch with redirect
