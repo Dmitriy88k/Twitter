@@ -101,11 +101,3 @@ feedForm.addEventListener("submit", (event) => {
     console.error("Error posting tweet:", error);
   })
 });
-
-fetch(`${backendUrl}/tweets`, {
-    headers: {
-        Authorization: apiToken,
-    },
-})
-    .then(r => r.json())
-    .then(console.log);

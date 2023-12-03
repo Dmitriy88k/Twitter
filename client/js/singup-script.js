@@ -1,4 +1,4 @@
-const signupForm = document.getElementById("form-signup");
+const signupForm = document.querySelector("#form-signup");
 const userName = document.getElementById("signup-name");
 const signupEmail = document.getElementById("signup-email");
 const signupPassword = document.getElementById("signup-password");
