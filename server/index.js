@@ -20,6 +20,10 @@ app.get("/feed", function(req, res) {
   res.sendFile(path.join(__dirname, "../client/feed.html"));
 });
 
+app.get("/explore", function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/explore.html"));
+});
+
 app.listen(8088, () => {
   console.log("Server started at http://localhost:" + 8088);
 });

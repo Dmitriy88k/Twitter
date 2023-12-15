@@ -4,10 +4,8 @@ const feedForm = document.getElementById('feed-form');
 const tweetsField = document.getElementById('tweets')
 const profileName = document.getElementById('profile-name')
 const profileEmail = document.getElementById('profile-email')
+const showMoreFollowers = document.getElementById('follow-show-more')
 
-// const profileUserName = document.createElement('p')
-// profileUserName.innerText = tweets.user.name;
-// profileName.appendChild(profileUserName);
 
 function loadUserInfo() {
   return fetch('http://167.71.82.123:8081/me', {
@@ -19,9 +17,14 @@ function loadUserInfo() {
   .then((tweetsArray) => {
       const userName = document.createElement('p')
       userName.innerText = tweetsArray.name;
+      userName.style.color = "black";
+      userName.style.fontWeight = "bold";
+      userName.style.fontSize = "12px";
       profileName.appendChild(userName);
       const userEmail = document.createElement('p')
       userEmail.innerText = tweetsArray.email;
+      userEmail.style.color = "#5B7083";
+      userEmail.style.fontSize = "12px";
       profileEmail.appendChild(userEmail);
   })
   .catch((error) => {
@@ -43,7 +46,7 @@ function loadTweets() {
 
       tweets.forEach(tweet => {
         const tweetContainer = document.createElement('div');
-        tweetContainer.style.marginTop = "35px";
+        
         
         const userImage = document.createElement("img");
         userImage.src = './img/profile.png'
@@ -52,7 +55,9 @@ function loadTweets() {
         userImage.style.borderRadius = "9999px";
 
         const tweetTime = document.createElement('p');
-        tweetTime.innerText = "Created on " + tweet.createdAt;
+        const newTime = new Date(tweet.createdAt);
+        const convertedTime = newTime.toLocaleString();
+        tweetTime.innerText = "Created on " + convertedTime;
         tweetTime.style.fontSize = "10px";
         tweetTime.style.color = "red";
         tweetTime.style.marginTop = "5px";
