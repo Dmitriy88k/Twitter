@@ -647,6 +647,7 @@
 }
 
 .following-tab {
+  max-width: 99%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -697,6 +698,93 @@
 
 .display-content.active {
   display: block;
+}
+
+
+.follow-button {
+  border: none;
+  outline: none;
+  padding: 5px 25px;
+  width: 150px;
+  background: #1da1f2;
+  color: white;
+  border-radius: 999px;
+  transition: all .4s ease-in-out;
+}
+
+.follow-button:focus {
+  border: none;
+  outline: none;
+}
+
+
+.follow-user-container, .followingUserNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 25px;
+
+}
+
+.explore-personal-trends {
+  background-color: #F7F9FA;
+  border-radius: 16px;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+.explore-trend {
+  padding-top: 3px;
+}
+
+.explore-trends-header, .explore-trend-title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.explore-trends-header h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.explore-trend-title p, .explore-trend p{
+  font-size: 12px;
+  font-weight: 400;
+  color: #5b7083;
+}
+
+.explore-trend h6 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #1DA1F2;
+}
+
+.explore-trends-header img, .explore-trend-title img {
+  width: 15px;
+  height: 15px;
+}
+
+.explore-trend {
+  margin-top: 5px;
+  border-top: 1px solid rgb(236, 241, 243);
+}
+
+#explore-show-more, #explore-follow-show-more {
+  color: #1DA1F2; 
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -.28px;
+  border: transparent;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+}
+
+.explore-who-to-follow {
+  padding: 10px 0px 1px 7px;
+  margin-top: 20px;
 }
 
 

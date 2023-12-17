@@ -1,3 +1,4 @@
+const backendUrl = 'http://167.71.82.123:8081';
 const loginEmail = document.getElementById('login-email');
 const loginPassword = document.getElementById('login-password');
 const signinForm = document.getElementById('form-signin');

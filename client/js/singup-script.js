@@ -1,3 +1,4 @@
+const backendUrl = 'http://167.71.82.123:8081';
 const signupForm = document.querySelector("#form-signup");
 const userName = document.getElementById("signup-name");
 const signupEmail = document.getElementById("signup-email");

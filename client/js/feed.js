@@ -1,11 +1,11 @@
+const backendUrl = 'http://167.71.82.123:8081';
 const apiToken = localStorage.getItem('token');
 const tweetInput = document.getElementById('tweet-input');
 const feedForm = document.getElementById('feed-form');
 const tweetsField = document.getElementById('tweets')
+const showMoreFollowers = document.getElementById('follow-show-more')
 const profileName = document.getElementById('profile-name')
 const profileEmail = document.getElementById('profile-email')
-const showMoreFollowers = document.getElementById('follow-show-more')
-
 
 function loadUserInfo() {
   return fetch('http://167.71.82.123:8081/me', {
@@ -33,7 +33,6 @@ function loadUserInfo() {
 }
 
 loadUserInfo();
-
     
 function loadTweets() {
   return fetch("http://167.71.82.123:8081/tweets", {
